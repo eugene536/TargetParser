@@ -1,0 +1,72 @@
+\hypertarget{namespacetarget__parser}{}\section{target\+\_\+parser Namespace Reference}
+\label{namespacetarget__parser}\index{target\+\_\+parser@{target\+\_\+parser}}
+
+
+Содержит функции и структуры для работы с парсером  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtarget__parser_1_1PatternTree}{Pattern\+Tree}
+\begin{DoxyCompactList}\small\item\em Класс представляющий разобранное выражение в виде дерева, возвращается из метода \hyperlink{namespacetarget__parser_a3e0ffa10d4fd38f05986d81c0529fdc1}{Parse }. \end{DoxyCompactList}\item 
+struct \hyperlink{structtarget__parser_1_1Vertex}{Vertex}
+\begin{DoxyCompactList}\small\item\em класс представляющий терминальное состояние вершины в дереве разбора \hyperlink{classtarget__parser_1_1PatternTree}{Pattern\+Tree}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ void(const \hyperlink{structtarget__parser_1_1Vertex}{Vertex} \&)$>$ \hyperlink{namespacetarget__parser_aa28dbbced739f360834455cbffeaa6e4}{Func}\hypertarget{namespacetarget__parser_aa28dbbced739f360834455cbffeaa6e4}{}\label{namespacetarget__parser_aa28dbbced739f360834455cbffeaa6e4}
+
+\begin{DoxyCompactList}\small\item\em тип функтора который передается в метод \hyperlink{classtarget__parser_1_1PatternTree_a851ee4b1279c2dcfc4557cab03f8aa83}{Pattern\+Tree\+::\+For\+Each\+Vertex}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacetarget__parser_aabf89c1d99b04bac59515c8616155d94}{Init} ()\hypertarget{namespacetarget__parser_aabf89c1d99b04bac59515c8616155d94}{}\label{namespacetarget__parser_aabf89c1d99b04bac59515c8616155d94}
+
+\begin{DoxyCompactList}\small\item\em инициализирует грамматику и парсер, нужно вызывать в main до использования функции \hyperlink{namespacetarget__parser_a3e0ffa10d4fd38f05986d81c0529fdc1}{Parse }. \end{DoxyCompactList}\item 
+\hyperlink{classtarget__parser_1_1PatternTree}{Pattern\+Tree} \hyperlink{namespacetarget__parser_acbab48610c44fba004e282d8008df094}{Parse} (const std\+::string \&text, int $\ast$pos\+\_\+unparsed=nullptr)
+\item 
+\hyperlink{classtarget__parser_1_1PatternTree}{Pattern\+Tree} \hyperlink{namespacetarget__parser_a3e0ffa10d4fd38f05986d81c0529fdc1}{Parse} (char const $\ast$first, size\+\_\+t len, int $\ast$pos\+\_\+unparsed=nullptr)
+\begin{DoxyCompactList}\small\item\em разбирает строку по соответствующей грамматике и строит для нее дерево разбора \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Содержит функции и структуры для работы с парсером 
+
+\subsection{Function Documentation}
+\index{target\+\_\+parser@{target\+\_\+parser}!Parse@{Parse}}
+\index{Parse@{Parse}!target\+\_\+parser@{target\+\_\+parser}}
+\subsubsection[{\texorpdfstring{Parse(const std\+::string \&text, int $\ast$pos\+\_\+unparsed=nullptr)}{Parse(const std::string &text, int *pos_unparsed=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pattern\+Tree} target\+\_\+parser\+::\+Parse (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{text, }
+\item[{int $\ast$}]{pos\+\_\+unparsed = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacetarget__parser_acbab48610c44fba004e282d8008df094}{}\label{namespacetarget__parser_acbab48610c44fba004e282d8008df094}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacetarget__parser_a3e0ffa10d4fd38f05986d81c0529fdc1}{Parse(char const $\ast$, size\+\_\+t, int $\ast$)} 
+\end{DoxySeeAlso}
+\index{target\+\_\+parser@{target\+\_\+parser}!Parse@{Parse}}
+\index{Parse@{Parse}!target\+\_\+parser@{target\+\_\+parser}}
+\subsubsection[{\texorpdfstring{Parse(char const $\ast$first, size\+\_\+t len, int $\ast$pos\+\_\+unparsed=nullptr)}{Parse(char const *first, size_t len, int *pos_unparsed=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pattern\+Tree} target\+\_\+parser\+::\+Parse (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{first, }
+\item[{size\+\_\+t}]{len, }
+\item[{int $\ast$}]{pos\+\_\+unparsed = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacetarget__parser_a3e0ffa10d4fd38f05986d81c0529fdc1}{}\label{namespacetarget__parser_a3e0ffa10d4fd38f05986d81c0529fdc1}
+
+
+разбирает строку по соответствующей грамматике и строит для нее дерево разбора 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & указатель на начало строки \\
+\hline
+{\em len} & длина строки \\
+\hline
+{\em pos\+\_\+unparsed} & если не равен nullptr, в случае ошибки (\hyperlink{classtarget__parser_1_1PatternTree_a4732f8e97b9e85e7072b21b4e0cb6bbd}{Is\+Valid } == false), указывает на первый неразобранный символ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+разобранное дерево, нужно проверить его, что он в валидном состоянии(строка распарсилась) 
+\end{DoxyReturn}

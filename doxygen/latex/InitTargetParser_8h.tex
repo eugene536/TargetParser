@@ -1,0 +1,59 @@
+\hypertarget{InitTargetParser_8h}{}\section{/home/nemchenko/work/tasks/sorm/sorm-\/probe/lib/\+Target\+Parser/include/\+Init\+Target\+Parser.h File Reference}
+\label{InitTargetParser_8h}\index{/home/nemchenko/work/tasks/sorm/sorm-\/probe/lib/\+Target\+Parser/include/\+Init\+Target\+Parser.\+h@{/home/nemchenko/work/tasks/sorm/sorm-\/probe/lib/\+Target\+Parser/include/\+Init\+Target\+Parser.\+h}}
+
+
+содержит структуру Vertex и декларацию функции \hyperlink{namespacetarget__parser_aabf89c1d99b04bac59515c8616155d94}{target\+\_\+parser\+::\+Init}.  
+
+
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+Include dependency graph for Init\+Target\+Parser.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{InitTargetParser_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{InitTargetParser_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtarget__parser_1_1Vertex}{target\+\_\+parser\+::\+Vertex}
+\begin{DoxyCompactList}\small\item\em класс представляющий терминальное состояние вершины в дереве разбора \hyperlink{classtarget__parser_1_1PatternTree}{Pattern\+Tree}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacetarget__parser}{target\+\_\+parser}
+\begin{DoxyCompactList}\small\item\em Содержит функции и структуры для работы с парсером \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ void(const Vertex \&)$>$ \hyperlink{namespacetarget__parser_aa28dbbced739f360834455cbffeaa6e4}{target\+\_\+parser\+::\+Func}\hypertarget{namespacetarget__parser_aa28dbbced739f360834455cbffeaa6e4}{}\label{namespacetarget__parser_aa28dbbced739f360834455cbffeaa6e4}
+
+\begin{DoxyCompactList}\small\item\em тип функтора который передается в метод \hyperlink{classtarget__parser_1_1PatternTree_a851ee4b1279c2dcfc4557cab03f8aa83}{Pattern\+Tree\+::\+For\+Each\+Vertex}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacetarget__parser_aabf89c1d99b04bac59515c8616155d94}{target\+\_\+parser\+::\+Init} ()\hypertarget{namespacetarget__parser_aabf89c1d99b04bac59515c8616155d94}{}\label{namespacetarget__parser_aabf89c1d99b04bac59515c8616155d94}
+
+\begin{DoxyCompactList}\small\item\em инициализирует грамматику и парсер, нужно вызывать в main до использования функции \hyperlink{namespacetarget__parser_a3e0ffa10d4fd38f05986d81c0529fdc1}{Parse }. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+содержит структуру Vertex и декларацию функции \hyperlink{namespacetarget__parser_aabf89c1d99b04bac59515c8616155d94}{target\+\_\+parser\+::\+Init}. 
+
+\begin{DoxyAuthor}{Author}
+Nemchenko Eugene 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/08/2016 
+\end{DoxyDate}
